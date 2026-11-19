@@ -1,13 +1,13 @@
 <script setup lang="ts">
 	import { ref } from 'vue'
 	async function getData() {
-		await new Promise((r) => setTimeout(r ,9000000))
+		await new Promise((r) => setTimeout(r ,9000))
 
 		if(Math.random() >= 0.5){
 		throw new Error('Sorry mate')
 		}
 
-		return "i'm shelly duval"
+		return "i'm shelly duvall"
 	}
 
 	const data : any = ref(null)
