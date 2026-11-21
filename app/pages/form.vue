@@ -27,13 +27,13 @@ function togglePwVisibility(id: string) {
 </script>
 
 <template>
-  <form>
-    <label for="username">User Name</label>
+  <form >
+    <label for="username">User Name: </label>
     <input type="text" id="username" v-model="username" />
-    <label for="password"> Password </label>
+    <label for="password"> Password: </label>
     <input :type="inputType" v-model="password" id="password" />
     <button type="button" @click="togglePwVisibility('password')">V</button>
-    <label for="confirmPassword"> Confirm Password </label>
+    <label for="confirmPassword">Confirm Password: </label>
     <input :type="checkInputType" v-model="checkPassword" id="confirmPassword" />
     <button type="button" @click="togglePwVisibility('checkPassword')">V</button>
   </form>
