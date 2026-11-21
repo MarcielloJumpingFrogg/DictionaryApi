@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import ApiCall from "./apiCall.vue";
-
-	const {data} = await useFetch('/api/hello')
+useHead({
+  titleTemplate: (titleCunk) => {
+    return titleCunk ? `${titleCunk} - My Dictionary App` : "My Dictionary App";
+  },
+});
 </script>
 
-
 <template>
-  <div>
-		<ApiCall />
-		<pre>{{data}}</pre>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
