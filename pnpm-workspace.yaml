@@ -1,3 +1,4 @@
 allowBuilds:
+  '@prisma/client': true
   esbuild: true
   vue-demi: true

@@ -24,18 +24,51 @@ function togglePwVisibility(id: string) {
     currentElement.value = "password";
   }
 }
+
+async function submitForm() {
+  const result = await $fetch("/api/newUser", {
+    method: "POST",
+    body: {
+			username: username.value,
+			password: password.value
+		},
+  });
+
+	console.log(result)
+}
 </script>
 
 <template>
-  <form >
+  <form class="">
     <label for="username">User Name: </label>
-    <input type="text" id="username" v-model="username" />
+    <input class="border border-black p-2 m-2" type="text" id="username" v-model="username" />
     <label for="password"> Password: </label>
-    <input :type="inputType" v-model="password" id="password" />
-    <button type="button" @click="togglePwVisibility('password')">V</button>
+    <input class="border border-black p-2 m-2" :type="inputType" v-model="password" id="password" />
+    <button
+      class="border border-black p-2 m-2"
+      type="button"
+      @click="togglePwVisibility('password')"
+    >
+      V
+    </button>
     <label for="confirmPassword">Confirm Password: </label>
-    <input :type="checkInputType" v-model="checkPassword" id="confirmPassword" />
-    <button type="button" @click="togglePwVisibility('checkPassword')">V</button>
+    <input
+      class="border border-black p-2 m-2"
+      :type="checkInputType"
+      v-model="checkPassword"
+      id="confirmPassword"
+    />
+    <button
+      class="border border-black p-2 m-2"
+      type="button"
+      @click="togglePwVisibility('checkPassword')"
+    >
+      V
+    </button>
+
+    <button class="border border-black p-2 m-2" type="submit" @click.prevent="submitForm()">
+      Submit
+    </button>
   </form>
   <p>{{ currentStatus }}</p>
 </template>

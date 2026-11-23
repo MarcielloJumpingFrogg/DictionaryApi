@@ -3,22 +3,31 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
+    "contract:emit": "prisma contract emit"
   },
   "dependencies": {
-    "@nuxt/ui": "^4.13.0",
+    "@libsql/client": "^0.18.0",
+    "@nuxthub/core": "0.10.12",
+    "@prisma/client": "^7.10.1",
+    "@prisma/orm-postgres": "8.0.0-rc.24",
     "@tailwindcss/vite": "^4.3.5",
+    "dotenv": "^18.0.10",
+    "drizzle-kit": "^0.31.11",
+    "drizzle-orm": "^0.45.4",
     "nuxt": "^4.6.4",
     "tailwindcss": "^4.3.5",
+    "typescript": "^7.0.2",
     "vue": "^3.5.45",
     "vue-router": "^5.4.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "@types/node": "^26.6.6"
+    "@prisma/cli-engine": "0.10.0",
+    "@types/node": "^26.6.6",
+    "prisma": "8.0.0-rc.34"
   }
 }

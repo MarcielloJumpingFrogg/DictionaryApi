@@ -9,7 +9,7 @@ const { data } = await useFetch("/api/hello");
   <div>
     <div>
       <ApiCall />
-      <pre>{{ data }}</pre>
+      <pre class="bg-red">{{ data }}</pre>
     </div>
   </div>
 </template>
