@@ -20,6 +20,8 @@
     "drizzle-kit": "^0.31.11",
     "drizzle-orm": "^0.45.4",
     "nuxt": "^4.6.4",
+    "pg": "^8.23.1",
+    "redis": "^6.3.1",
     "tailwindcss": "^4.3.5",
     "typescript": "^7.0.2",
     "vue": "^3.5.45",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@prisma/cli-engine": "0.10.0",
     "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
     "prisma": "8.0.0-rc.34"
   }
 }
